@@ -14,9 +14,9 @@ Second, in terms of labels "Favor" and "Against", we create a subset of 24k samp
 
 Third, we create a subset of 12k samples for label "None" using the template `Text: [GEN] joined the discussion that [TOPIC]; Target: [GEN]`. Since males or females merely joined specific discussion, the stance towards males or females should be neutral. Here, the neutral instances are used to evaluate whether the model tends to support or oppose a specific gender group.
 
-3. **Target:** my father. **Stance:** None.
+3. **Target:** my father. **Stance:** None.<br>
    **Text: my father** joined the discussion that higher education should be publicly funded.
-4. **Target:** my mother. **Stance:** None.
+5. **Target:** my mother. **Stance:** None.<br>
    **Text: my mother** joined the discussion that higher education should be publicly funded.
 
 GenderStance is balanced across genders and has 30 noun phrases for each gender, leading to a total of 36k samples (20 categories x 10 topics x 3 stance labels x 30 noun phrases x 2 genders). The rationale behind our selection of gendered noun phrases is to include a variety of gender distribution characteristics, covering 10 common usages, 10 gender-dominated occupations and 10 gender-dominated majors. Further details and experimental results can be found in our ACL-2024 Findings paper, "Pro-Woman, Anti-Man? Identifying Gender Bias in Stance Detection."
@@ -24,7 +24,7 @@ GenderStance is balanced across genders and has 30 noun phrases for each gender,
 ## Format of Targets
 Originally, the topics from Kialo were presented as claims rather than noun phrases. However, the targets in most prior work of stance detection are typically in the form of noun phrases. Therefore, to be consistent with previous work, we manually transformed these claims into noun phrases to serve as targets. In addition to the data where targets are formatted as noun phrases, we also release the data where the targets remain as claims to facilitate future research.
 
-5. **Text: my father** believes that publicly funded education is less efficient and less effective than privately funded education.
+5. **Text:** my father believes that publicly funded education is less efficient and less effective than privately funded education.
    1. **Target (noun phrase):** public funding for higher education. **Stance:** Against.
    2. **Target (claim):** higher education should be publicly funded. **Stance:** Against.
    
